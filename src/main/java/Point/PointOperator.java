@@ -33,11 +33,6 @@ public final class PointOperator {
         }
 
         System.arraycopy(result, 0, vector, 0, vector.length);
-
-//        ou
-//        for (int i = 0; i < vector.length; i++) {
-//            vector[i] = result[i];
-//        }
     }
 
     /** TODO

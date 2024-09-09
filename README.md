@@ -170,10 +170,7 @@ Veuillez visiter [ce lien](https://docs.google.com/document/d/12YDr57UofDKu5mCJB
 class Example {
   //Exemple de mauvais code
   private static boolean foo(Integer x) {
-    if (x > 10)
-      return true;
-    else
-      return false;
+      return x > 10;
   }
 
   //Exemple de bon code

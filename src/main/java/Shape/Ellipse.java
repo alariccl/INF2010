@@ -13,8 +13,8 @@ public class Ellipse extends BaseShape {
      * @param heightDiameter Height of the Ellipse
      */
     public Ellipse(Double widthDiameter, Double heightDiameter) {
-        for (Double i = -widthDiameter/2; i < widthDiameter/2; i += 0.5) {
-            for (Double j = -heightDiameter/2; j < heightDiameter/2; j += 0.5) {
+        for (double i = -widthDiameter/2; i <= widthDiameter/2; i += 0.5) {
+            for (double j = -heightDiameter/2; j <= heightDiameter/2; j += 0.5) {
                 if ((i * i) / (widthDiameter/2 * widthDiameter/2) + (j * j) / (heightDiameter/2 * heightDiameter/2) <= 1) {
                     this.add(new Point2d(i, j));
                 }
@@ -27,13 +27,7 @@ public class Ellipse extends BaseShape {
      * @param dimensions 2D point containing the width and height of the Ellipse
      */
     public Ellipse(Point2d dimensions) {
-        for (Double i = -dimensions.X()/2; i <= dimensions.X()/2; i += 0.5) {
-            for (Double j = -dimensions.Y()/2; j <= dimensions.Y()/2; j += 0.5) {
-                if ((i * i) / (dimensions.X()/2 * dimensions.X()/2) + (j * j) / (dimensions.Y()/2 * dimensions.Y()/2) <= 1) {
-                    this.add(new Point2d(i, j));
-                }
-            }
-        }
+        this(dimensions.X(), dimensions.Y());
     }
 
     /**
